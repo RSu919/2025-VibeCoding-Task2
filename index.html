@@ -197,6 +197,28 @@
     .section-about .about-photo {
       border: 1px solid var(--border);
     }
+    .about-intro {
+      color: var(--text-1);
+    }
+    .check-list {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 8px;
+    }
+    .check-list li {
+      position: relative;
+      list-style: none;
+      padding-left: 24px;
+    }
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
     /* =========================================
        CSS:ABOUT-END
        ========================================= */
@@ -401,17 +423,24 @@
       <section id="about" class="section section-about" aria-labelledby="about-heading">
         <div class="container grid-2">
           <div class="stack">
-            <h2 id="about-heading" class="section-title">關於我（之後會用 Section SDD 替換）</h2>
-            <p class="lead">這裡目前是 About 區的占位內容，預計放個人簡介、工作理念與經歷摘要。未來會用 Section SDD 產生更完整的圖文排版與敘事。</p>
-            <p>請開發者將新的 <strong>section 程式碼整段</strong>貼在本區的「SECTION:ABOUT-START / SECTION:ABOUT-END」註解之間，完全取代現在的內容。</p>
-            <ul class="list-inline">
-              <li class="tag">使用者介面設計</li>
-              <li class="tag">網頁效能優化</li>
-              <li class="tag">可用性與無障礙</li>
+            <h2 id="about-heading" class="section-title">關於我</h2>
+            <p class="about-intro">我是一名專注於使用者體驗與可維護性的前端工程師，平常除了開發也投入教學與技術顧問／接案工作。擅長以語意化 HTML 與現代 CSS 打造穩定的 RWD 版面，並以清晰的設計規範維持團隊一致性。</p>
+            <p>過去長期與產品與教學場域合作，重視溝通、喜歡把需求拆解講清楚；偏好以資料與實驗來驗證設計決策，讓每一次交付都能兼顧易用性與可維護性。</p>
+
+            <ul class="check-list">
+              <li>協助建立樣式系統與設計規範（Typography／Spacing／Component Tokens）</li>
+              <li>將舊版面重構為手機優先的 RWD，改善可讀性與載入表現</li>
+              <li>以教學與文件化流程，提升團隊對前端品質的共同語言</li>
             </ul>
+
+            <div class="btn-row">
+              <a class="btn" href="#projects">查看作品集</a>
+              <a class="btn btn--ghost" href="#contact">聯絡我</a>
+            </div>
           </div>
+
           <figure>
-            <img class="about-photo" loading="lazy" src="https://source.unsplash.com/640x640/?workspace,desk" alt="桌上型電腦、筆記本與咖啡的工作桌面" />
+            <img class="about-photo" loading="lazy" src="https://source.unsplash.com/640x640/?programmer,coding" alt="正在撰寫程式碼的工程師示意照片" />
           </figure>
         </div>
       </section>
